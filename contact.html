@@ -5,51 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اتصل بنا - أكاديمية الزيتون</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style> body { font-family: 'Tajawal', sans-serif; } </style>
+    <style>
+        body { font-family: 'Poppins', 'Tajawal', sans-serif; color: #002147; }
+        .bg-main-blue { background-color: #002147; }
+        .bg-accent-gold { background-color: #D4AF37; }
+        .text-accent-gold { color: #D4AF37; }
+        .border-accent-gold { border-color: #D4AF37; }
+        .ring-accent-gold:focus { ring-color: #D4AF37; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50">
 
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-blue-700"><a href="index.html">أكاديمية الزيتون</a></div>
-            <div class="hidden md:flex space-x-8 space-x-reverse items-center">
-                <a href="about.html" class="text-gray-600 hover:text-blue-600">عن الأكاديمية</a>
-                <a href="blog.html" class="text-gray-600 hover:text-blue-600">المدونة</a>
-                <a href="contact.html" class="text-blue-600 font-bold">اتصل بنا</a>
+            <a href="index.html" class="text-2xl font-bold text-main-blue">أكاديمية الزيتون</a>
+            <div class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                 <a href="about.html" class="text-base font-medium hover:text-accent-gold">عن الأكاديمية</a>
+                 <a href="gallery.html" class="text-base font-medium hover:text-accent-gold">معرض الصور</a>
+                 <a href="blog.html" class="text-base font-medium hover:text-accent-gold">المدونة</a>
+                 <a href="contact.html" class="text-base font-bold text-accent-gold">اتصل بنا</a>
             </div>
-            <a href="register.html" class="hidden md:block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700">سجل الآن</a>
-        </nav>
-    </header>
+            <a href="register.html" class="hidden lg:block bg-accent-gold text-white font-bold py-2 px-6 rounded-md">التسجيل الآن</a>
+            </nav>
+        </header>
 
-    <main class="py-20">
+    <main class="py-24">
         <div class="container mx-auto px-6">
-            <div class="text-center">
-                <h1 class="text-4xl font-bold">تواصل معنا</h1>
-                <p class="text-gray-600 mt-2">يسعدنا استقبال استفساراتكم واقتراحاتكم.</p>
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-main-blue mb-4">نحن هنا من أجلك</h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">لديك سؤال؟ تحتاج إلى مساعدة؟ لا تتردد في التواصل معنا.</p>
             </div>
-
-            <div class="mt-16 grid md:grid-cols-12 gap-8 bg-white p-8 rounded-lg shadow-lg">
-                <div class="md:col-span-5">
-                    <h2 class="text-2xl font-bold mb-6">معلومات الاتصال</h2>
+            <div class="grid lg:grid-cols-12 gap-12 bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                <div class="lg:col-span-5">
+                    <h2 class="text-3xl font-bold mb-6">معلومات الاتصال</h2>
                     <div class="space-y-6">
                         <div class="flex items-start space-x-4 space-x-reverse">
-                            <i class="fas fa-map-marker-alt text-blue-600 text-2xl mt-1"></i>
+                            <i class="fas fa-map-marker-alt text-2xl text-accent-gold mt-1"></i>
                             <div>
-                                <h3 class="font-bold text-lg">العنوان</h3>
+                                <h3 class="font-bold text-lg">موقعنا</h3>
                                 <p class="text-gray-600">شارع الزيتون، حي الجامعة، تعز، اليمن</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4 space-x-reverse">
-                            <i class="fas fa-phone-alt text-blue-600 text-2xl mt-1"></i>
+                            <i class="fas fa-phone-alt text-2xl text-accent-gold mt-1"></i>
                             <div>
                                 <h3 class="font-bold text-lg">الهاتف</h3>
                                 <p class="text-gray-600" dir="ltr">+967 734 788 351</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4 space-x-reverse">
-                            <i class="fas fa-envelope text-blue-600 text-2xl mt-1"></i>
+                            <i class="fas fa-envelope text-2xl text-accent-gold mt-1"></i>
                             <div>
                                 <h3 class="font-bold text-lg">البريد الإلكتروني</h3>
                                 <p class="text-gray-600">saber@zaytounacademy.org</p>
@@ -57,32 +66,35 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="md:col-span-7">
-                     <h2 class="text-2xl font-bold mb-6">أرسل لنا رسالة</h2>
-                     <form action="#" method="POST">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <input type="text" placeholder="الاسم الكامل" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            <input type="email" placeholder="البريد الإلكتروني" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <div class="lg:col-span-7">
+                     <h2 class="text-3xl font-bold mb-6">أرسل لنا رسالة</h2>
+                     <form action="#" method="POST" class="space-y-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="font-semibold">الاسم الكامل</label>
+                                <input type="text" id="name" class="w-full mt-2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-accent-gold">
+                            </div>
+                             <div>
+                                <label for="email" class="font-semibold">البريد الإلكتروني</label>
+                                <input type="email" id="email" class="w-full mt-2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-accent-gold">
+                            </div>
                         </div>
-                        <input type="text" placeholder="الموضوع" class="w-full mt-4 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <textarea rows="5" placeholder="نص الرسالة" class="w-full mt-4 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                        <button type="submit" class="mt-4 bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700">إرسال</button>
+                        <div>
+                            <label for="subject" class="font-semibold">الموضوع</label>
+                            <input type="text" id="subject" class="w-full mt-2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-accent-gold">
+                        </div>
+                        <div>
+                             <label for="message" class="font-semibold">رسالتك</label>
+                             <textarea id="message" rows="5" class="w-full mt-2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-accent-gold"></textarea>
+                        </div>
+                        <button type="submit" class="bg-accent-gold text-white font-bold py-3 px-8 rounded-md hover:opacity-90 transition-opacity">إرسال الرسالة</button>
                      </form>
                 </div>
-            </div>
-            
-            <div class="mt-12">
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61595.10886617066!2d44.00977114660317!3d13.579947934444732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x161c61c755c3c2b9%3A0x14a66a17b35ea693!2sTaizz%2C%20Yemen!5e0!3m2!1sen!2s!4v1686556539275!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-md"></iframe>
             </div>
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; <span id="current-year"></span> أكاديمية الزيتون. جميع الحقوق محفوظة.</p>
-        </div>
-    </footer>
-    <script> document.getElementById('current-year').textContent = new Date().getFullYear(); </script>
+    <footer class="bg-main-blue text-white pt-16 pb-8 mt-24">
+        </footer>
 </body>
 </html>

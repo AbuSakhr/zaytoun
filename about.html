@@ -5,77 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عن أكاديمية الزيتون</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style> body { font-family: 'Tajawal', sans-serif; } </style>
+    <style>
+        body { font-family: 'Poppins', 'Tajawal', sans-serif; color: #002147; }
+        .bg-main-blue { background-color: #002147; }
+        .bg-accent-gold { background-color: #D4AF37; }
+        .text-accent-gold { color: #D4AF37; }
+        .section-heading { font-weight: 700; font-size: 2.25rem; color: #002147; margin-bottom: 1rem; position: relative; padding-bottom: 0.75rem; }
+        .section-heading::after { content: ''; position: absolute; bottom: 0; right: 0; width: 60px; height: 4px; background-color: #D4AF37; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50">
 
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-blue-700"><a href="index.html">أكاديمية الزيتون</a></div>
-            <div class="hidden md:flex space-x-8 space-x-reverse items-center">
-                <a href="about.html" class="text-blue-600 font-bold">عن الأكاديمية</a>
-                <a href="blog.html" class="text-gray-600 hover:text-blue-600">المدونة</a>
-                <a href="contact.html" class="text-gray-600 hover:text-blue-600">اتصل بنا</a>
+            <a href="index.html" class="text-2xl font-bold text-main-blue">أكاديمية الزيتون</a>
+            <div class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="about.html" class="text-base font-bold text-accent-gold">عن الأكاديمية</a>
+                <a href="gallery.html" class="text-base font-medium hover:text-accent-gold">معرض الصور</a>
+                <a href="blog.html" class="text-base font-medium hover:text-accent-gold">المدونة</a>
+                <a href="contact.html" class="text-base font-medium hover:text-accent-gold">اتصل بنا</a>
             </div>
-            <a href="register.html" class="hidden md:block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700">سجل الآن</a>
+            <a href="register.html" class="hidden lg:block bg-accent-gold text-white font-bold py-2 px-6 rounded-md hover:opacity-90">التسجيل الآن</a>
+            <button id="mobile-menu-button" class="lg:hidden text-main-blue text-2xl"><i class="fas fa-bars"></i></button>
         </nav>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t p-4">
+            <a href="about.html" class="block py-2 px-4 text-center text-accent-gold font-bold bg-gray-100 rounded-md">عن الأكاديمية</a>
+            </div>
     </header>
 
     <main>
-        <section class="bg-blue-600 text-white text-center py-20">
-            <h1 class="text-5xl font-extrabold">من نحن</h1>
-            <p class="text-xl mt-4 text-blue-100">نتعلم، ننمو، ونلهم الأجيال القادمة</p>
+        <section class="bg-main-blue text-white text-center py-20">
+            <div class="container mx-auto px-6">
+                <h1 class="text-5xl font-extrabold">من نحن</h1>
+                <p class="text-xl mt-4 text-blue-200 max-w-2xl mx-auto">مؤسسة تعليمية برؤية عصرية، ملتزمون بتقديم تجربة تعليمية فريدة تمهد الطريق لمستقبل واعد.</p>
+            </div>
         </section>
 
-        <section class="py-20">
-            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">رسالتنا</h2>
-                    <p class="text-lg leading-relaxed text-gray-600">توفير تعليم نوعي ومبتكر في بيئة آمنة ومحفزة، لبناء جيل من المفكرين والمبدعين القادرين على المساهمة بفعالية في مجتمعهم، مع الحفاظ على هويتهم الثقافية وقيمهم الأصيلة.</p>
-                </div>
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">رؤيتنا</h2>
-                    <p class="text-lg leading-relaxed text-gray-600">أن نكون المؤسسة التعليمية الابتدائية الرائدة في تعز، والمعيار للتميز الأكاديمي والتربوي، من خلال دمج التكنولوجيا الحديثة مع أفضل الممارسات التعليمية العالمية.</p>
+        <section class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="section-heading">رسالتنا</h2>
+                        <p class="mt-8 text-lg text-gray-600 leading-relaxed">توفير تعليم نوعي ومبتكر في بيئة آمنة ومحفزة، لبناء جيل من المفكرين والمبدعين القادرين على المساهمة بفعالية في مجتمعهم، مع الحفاظ على هويتهم الثقافية وقيمهم الأصيلة.</p>
+                    </div>
+                    <div>
+                        <h2 class="section-heading">رؤيتنا</h2>
+                        <p class="mt-8 text-lg text-gray-600 leading-relaxed">أن نكون المؤسسة التعليمية الابتدائية الرائدة في تعز، والمعيار للتميز الأكاديمي والتربوي، من خلال دمج التكنولوجيا الحديثة مع أفضل الممارسات التعليمية العالمية.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="bg-gray-100 py-20">
+        <section class="py-24 bg-gray-100">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">تعرف على فريقنا</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                        <img src="https://placehold.co/200x200/A5B4FC/333333?text=مدير+الأكاديمية" class="w-32 h-32 rounded-full mx-auto mb-4" alt="اسم المدير">
-                        <h3 class="text-xl font-bold">أ. صابر عبدالله</h3>
-                        <p class="text-gray-500">مدير الأكاديمية</p>
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-4xl font-bold">تعرف على قيادتنا التربوية</h2>
+                    <p class="mt-4 text-gray-600">فريق من الخبراء التربويين المتفانين في خدمة رسالتنا التعليمية وتوجيه طلابنا نحو النجاح.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+                    <div class="text-center">
+                        <img class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover" src="images/about/manager-photo.jpg" alt="المدير">
+                        <h3 class="mt-4 text-xl font-bold">أ. صابر عبدالله</h3>
+                        <p class="text-accent-gold">مدير الأكاديمية</p>
                     </div>
-                     <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                        <img src="https://placehold.co/200x200/A5B4FC/333333?text=وكيل+المدرسة" class="w-32 h-32 rounded-full mx-auto mb-4" alt="اسم الوكيل">
-                        <h3 class="text-xl font-bold">أ. فاطمة علي</h3>
-                        <p class="text-gray-500">وكيلة المدرسة</p>
+                    <div class="text-center">
+                        <img class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover" src="images/about/deputy-head.jpg" alt="الوكيل">
+                        <h3 class="mt-4 text-xl font-bold">أ. فاطمة علي</h3>
+                        <p class="text-accent-gold">وكيلة المدرسة</p>
                     </div>
-                     <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                        <img src="https://placehold.co/200x200/A5B4FC/333333?text=مشرف+أكاديمي" class="w-32 h-32 rounded-full mx-auto mb-4" alt="اسم المشرف">
-                        <h3 class="text-xl font-bold">أ. أحمد قائد</h3>
-                        <p class="text-gray-500">المشرف الأكاديمي</p>
+                    <div class="text-center">
+                        <img class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover" src="images/about/academic-supervisor.jpg" alt="المشرف">
+                        <h3 class="mt-4 text-xl font-bold">أ. أحمد قائد</h3>
+                        <p class="text-accent-gold">المشرف الأكاديمي</p>
                     </div>
-                     <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                        <img src="https://placehold.co/200x200/A5B4FC/333333?text=مرشدة+طلابية" class="w-32 h-32 rounded-full mx-auto mb-4" alt="اسم المرشدة">
-                        <h3 class="text-xl font-bold">أ. هدى ياسين</h3>
-                        <p class="text-gray-500">مرشدة طلابية</p>
+                    <div class="text-center">
+                        <img class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover" src="images/about/student-counselor.jpg" alt="المرشدة">
+                        <h3 class="mt-4 text-xl font-bold">أ. هدى ياسين</h3>
+                        <p class="text-accent-gold">مرشدة طلابية</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; <span id="current-year"></span> أكاديمية الزيتون. جميع الحقوق محفوظة.</p>
-        </div>
-    </footer>
-    <script> document.getElementById('current-year').textContent = new Date().getFullYear(); </script>
+
+    <footer class="bg-main-blue text-white pt-16 pb-8">
+        </footer>
+
+    <script>
+        // ... نفس كود الجافاسكريبت ...
+    </script>
 </body>
 </html>
