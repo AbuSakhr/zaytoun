@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التسجيل - أكاديمية الزيتون</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Tajawal', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-700">
+                <a href="index.html">أكاديمية الزيتون</a>
+            </div>
+            <div class="hidden md:flex space-x-8 space-x-reverse items-center">
+                <a href="index.html#about" class="text-gray-600 hover:text-blue-600">عن الأكاديمية</a>
+                <a href="blog.html" class="text-gray-600 hover:text-blue-600">المدونة</a>
+                <a href="index.html#stages" class="text-gray-600 hover:text-blue-600">المراحل الدراسية</a>
+                <a href="index.html#contact" class="text-gray-600 hover:text-blue-600">اتصل بنا</a>
+            </div>
+            <a href="register.html" class="hidden md:block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700">سجل الآن</a>
+            </nav>
+    </header>
+
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-4">طلب التسجيل في أكاديمية الزيتون</h1>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+                نحن سعداء باهتمامكم بالانضمام إلى عائلتنا. يرجى ملء النموذج أدناه لتقديم طلب تسجيل مبدئي، وسيقوم فريقنا بالتواصل معكم في أقرب وقت ممكن لاستكمال الإجراءات.
+            </p>
+
+            <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-xl">
+                <form action="#" method="POST">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="student-name" class="block text-gray-700 font-bold mb-2">اسم الطالب/ـة الكامل</label>
+                            <input type="text" id="student-name" name="student-name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <label for="student-dob" class="block text-gray-700 font-bold mb-2">تاريخ ميلاد الطالب/ـة</label>
+                            <input type="date" id="student-dob" name="student-dob" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <label for="current-grade" class="block text-gray-700 font-bold mb-2">الصف الدراسي المطلوب</label>
+                            <select id="current-grade" name="current-grade" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option>الصف الأول</option>
+                                <option>الصف الثاني</option>
+                                <option>الصف الثالث</option>
+                                <option>الصف الرابع</option>
+                                <option>الصف الخامس</option>
+                                <option>الصف السادس</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="parent-name" class="block text-gray-700 font-bold mb-2">اسم ولي الأمر</label>
+                            <input type="text" id="parent-name" name="parent-name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <label for="phone-number" class="block text-gray-700 font-bold mb-2">رقم الهاتف (مع رمز الدولة)</label>
+                            <input type="tel" id="phone-number" name="phone-number" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="+967 123 456 789" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-bold mb-2">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <label for="message" class="block text-gray-700 font-bold mb-2">ملاحظات إضافية (اختياري)</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+
+                    <div class="mt-8 text-center">
+                        <button type="submit" class="bg-blue-600 text-white font-bold py-3 px-10 rounded-full hover:bg-blue-700 transition duration-300 text-lg">
+                            إرسال طلب التسجيل
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; <span id="current-year"></span> أكاديمية الزيتون. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -3,299 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أكاديمية الزيتون - تعلم، نمو، ازدهار</title>
-    <meta name="description" content="أكاديمية الزيتون هي مدرسة ابتدائية مستقلة في تعز، اليمن. نقدم التعليم الأساسي للطلاب من الصف الأول إلى الصف السادس، مع التركيز على تنمية مهارات القراءة، الرياضيات، العلوم، والمهارات الحياتية، باستخدام أحدث أساليب التعليم الرقمي.">
+    <title>أكاديمية الزيتون | تعليم يواكب المستقبل</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Custom CSS for animations and font-family (Inter is loaded via Google Fonts) */
-        body {
-            font-family: 'Inter', sans-serif; /* Apply Inter font globally */
+        /* استخدام خط Poppins الجديد وتعيين الألوان الأساسية */
+        body { 
+            font-family: 'Poppins', 'Tajawal', sans-serif;
+            color: #002147; /* أزرق داكن للنصوص */
         }
-
-        /* Blob animation for hero section */
-        @keyframes blob {
-            0% {
-                transform: translate(0px, 0px) scale(1);
-            }
-            33% {
-                transform: translate(30px, -50px) scale(1.1);
-            }
-            66% {
-                transform: translate(-20px, 20px) scale(0.9);
-            }
-            100% {
-                transform: translate(0px, 0px) scale(1);
-            }
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 33, 71, 0.7), rgba(0, 33, 71, 0.7)), url('images/new-hero-bg.jpg'); /* استبدل الصورة بصورة عالية الجودة */
+            background-size: cover;
+            background-position: center;
         }
-
-        .animate-blob {
-            animation: blob 7s infinite cubic-bezier(0.6, 0.01, 0.3, 0.9);
+        .bg-main-blue { background-color: #002147; }
+        .bg-accent-gold { background-color: #D4AF37; } /* ذهبي */
+        .text-accent-gold { color: #D4AF37; }
+        .border-accent-gold { border-color: #D4AF37; }
+        .section-heading {
+            font-weight: 700; /* bold */
+            font-size: 2.25rem; /* text-4xl */
+            color: #002147;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 0.75rem;
         }
-
-        .animation-delay-2000 {
-            animation-delay: 2s;
-        }
-
-        .animation-delay-4000 {
-            animation-delay: 4s;
-        }
-
-        /* Fade-in animation for hero text */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-in {
-            animation: fadeIn 1s ease-out forwards;
-        }
-
-        .animation-delay-500 {
-            animation-delay: 0.5s;
-        }
-
-        .animation-delay-1000 {
-            animation-delay: 1s;
-        }
-
-        /* Smooth scroll behavior */
-        html {
-            scroll-behavior: smooth;
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #D4AF37;
         }
     </style>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-blue-950 via-indigo-950 to-purple-950 text-white">
+<body class="bg-gray-50">
 
-    <header class="py-6 px-4 md:px-8 lg:px-16 flex justify-between items-center">
-        <div class="text-3xl font-extrabold text-white">
-            أكاديمية الزيتون
-        </div>
-        <nav class="hidden md:flex space-x-8 text-lg">
-            <a href="#about" class="hover:text-blue-400 transition-colors duration-300">عن الأكاديمية</a>
-            <a href="#register" class="hover:text-blue-400 transition-colors duration-300">التسجيل</a>
-            <a href="#contact" class="hover:text-blue-400 transition-colors duration-300">اتصل بنا</a>
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-main-blue">
+                أكاديمية الزيتون
+            </a>
+            <div class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="about.html" class="text-base font-medium hover:text-accent-gold transition-colors">عن الأكاديمية</a>
+                <a href="gallery.html" class="text-base font-medium hover:text-accent-gold transition-colors">معرض الصور</a>
+                <a href="blog.html" class="text-base font-medium hover:text-accent-gold transition-colors">المدونة</a>
+                <a href="contact.html" class="text-base font-medium hover:text-accent-gold transition-colors">اتصل بنا</a>
+            </div>
+            <a href="register.html" class="hidden lg:block bg-accent-gold text-white font-bold py-2 px-6 rounded-md hover:opacity-90 transition-opacity">
+                التسجيل الآن
+            </a>
+             <button id="mobile-menu-button" class="lg:hidden text-main-blue text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t p-4">
+             <a href="about.html" class="block py-2 px-4 text-center hover:bg-gray-100 rounded-md">عن الأكاديمية</a>
+             <a href="gallery.html" class="block py-2 px-4 text-center hover:bg-gray-100 rounded-md">معرض الصور</a>
+             <a href="blog.html" class="block py-2 px-4 text-center hover:bg-gray-100 rounded-md">المدونة</a>
+             <a href="contact.html" class="block py-2 px-4 text-center hover:bg-gray-100 rounded-md">اتصل بنا</a>
+             <a href="register.html" class="block w-full text-center mt-4 bg-accent-gold text-white font-bold py-2 px-6 rounded-md hover:opacity-90">التسجيل الآن</a>
+        </div>
     </header>
 
-    <section class="relative flex flex-col items-center justify-center text-center py-20 px-4 md:py-32 lg:py-48 overflow-hidden">
-        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
-        <div class="absolute top-1/2 left-1/2 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+    <main>
+        <section class="hero-section text-white h-[600px] flex items-center justify-center">
+            <div class="text-center max-w-3xl mx-auto px-4">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">بناء قادة المستقبل</h1>
+                <p class="mt-4 text-lg md:text-xl font-light text-gray-200">في أكاديمية الزيتون، نصنع بيئة تعليمية ملهمة تجمع بين الأصالة والمعاصرة لإعداد جيل متميز.</p>
+            </div>
+        </section>
 
-        <h1 class="relative z-10 text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-fade-in">
-            تعلم، نمو، ازدهار
-            <br>
-            مع أكاديمية الزيتون
-        </h1>
-        <p class="relative z-10 text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl animate-fade-in animation-delay-500">
-            بوابتك نحو التميز الأكاديمي والمهني في عالم متطور.
-        </p>
-        <a
-            href="#register"
-            class="relative z-10 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition-all duration-300 animate-fade-in animation-delay-1000"
-        >
-            سجل الآن
-        </a>
-    </section>
-
-    <section id="about" class="py-20 px-4 md:px-8 lg:px-16 bg-gray-900 bg-opacity-50 rounded-t-3xl shadow-inner">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                عن أكاديمية الزيتون
-            </h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="text-lg leading-relaxed text-gray-300 space-y-6">
-                    <p>
-أكاديمية الزيتون هي مدرسة ابتدائية مستقلة مقرها في تعز، اليمن. نقدم برامج التعليم الأساسي المخصصة للطلاب من الصف الأول إلى الصف السادس، مع التركيز على بناء أسس قوية في القراءة، والرياضيات، والعلوم، والمهارات الحياتية. نسعى إلى تهيئة بيئة تعليمية محفزة تجمع بين المناهج الوطنية وأحدث أساليب التعليم الرقمي.
-</p>
-<p>
-نحن نؤمن بأن السنوات الأولى من التعليم تشكل الأساس لمستقبل مشرق. لذلك نعمل على تطوير مهارات التفكير النقدي، والإبداع، والعمل التعاوني لدى طلابنا، مع توفير الدعم الكامل لكل طالب في رحلته التعليمية.
-</p>
-                    <p>
-    تركز أكاديمية الزيتون على تنمية مهارات الطلاب الأساسية في القراءة، الكتابة، والرياضيات، إلى جانب تعزيز التفكير النقدي وحل المشكلات منذ المراحل الأولى من التعليم. نحرص على تقديم تعليم شامل يلبي احتياجات جميع الطلاب ويشجعهم على حب التعلم.
-</p>
-<p>
-    نوفر بيئة تعليمية محفزة تشجع الطلاب على التعاون والمشاركة الفعالة داخل الصفوف الدراسية، مع التركيز على تطوير مهارات التواصل والعمل الجماعي. كما نشجع على استخدام التقنيات الحديثة لدعم التعلم الرقمي داخل الصف وخارجه..
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="section-heading">مرحبًا بكم في أكاديمية الزيتون</h2>
+                    <p class="mt-8 text-lg text-gray-600 leading-relaxed">
+                        نحن مؤسسة تعليمية تؤمن بأن كل طفل يمتلك إمكانات فريدة. مهمتنا هي اكتشاف هذه الإمكانات وتنميتها من خلال منهج تعليمي متكامل يركز على التفوق الأكاديمي، بناء الشخصية، وغرس القيم النبيلة.
                     </p>
+                    <a href="about.html" class="inline-block mt-8 bg-main-blue text-white font-bold py-3 px-8 rounded-md hover:bg-blue-900 transition-colors">
+                        اكتشف المزيد عنا
+                    </a>
                 </div>
-                <div class="flex justify-center items-center">
-                    <img
-                        src="https://placehold.co/500x300/3B82F6/FFFFFF?text=Zaytoun+Academy"
-                        alt="صورة أكاديمية الزيتون"
-                        class="rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-300"
-                    />
+                <div>
+                    <img src="images/welcome-section.jpg" alt="طلاب سعداء في أكاديمية الزيتون" class="rounded-lg shadow-xl">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="register" class="py-20 px-4 md:px-8 lg:px-16 bg-gray-800 bg-opacity-70">
-        <div class="max-w-3xl mx-auto bg-gray-900 p-8 md:p-12 rounded-2xl shadow-2xl border border-blue-700">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
-                سجل الآن
-            </h2>
-            <div id="form-message" class="hidden p-4 mb-6 rounded-lg text-center text-white"></div>
-
-            <form id="registration-form" class="space-y-6">
-                <div>
-                    <label for="name" class="block text-lg font-medium text-gray-200 mb-2">الاسم الكامل</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-white placeholder-gray-400 transition-all duration-200"
-                        placeholder="أدخل اسمك الكامل"
-                        required
-                    />
-                </div>
-                <div>
-                    <label for="email" class="block text-lg font-medium text-gray-200 mb-2">البريد الإلكتروني</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-white placeholder-gray-400 transition-all duration-200"
-                        placeholder="أدخل بريدك الإلكتروني"
-                        required
-                    />
-                </div>
-                <div>
-                    <label for="phone" class="block text-lg font-medium text-gray-200 mb-2">رقم الهاتف</label>
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-white placeholder-gray-400 transition-all duration-200"
-                        placeholder="أدخل رقم هاتفك"
-                        required
-                    />
-                </div>
-                <div>
-                    <label for="course" class="block text-lg font-medium text-gray-200 mb-2">الدورة المهتم بها</label>
-                    <select
-                        id="course"
-                        name="course"
-                        class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-white placeholder-gray-400 appearance-none transition-all duration-200 cursor-pointer"
-                        required
-                    >
-                        <option value="" disabled selected>اختر دورة</option>
-                        <option value="web-development">تطوير الويب</option>
-                        <option value="data-science">علم البيانات</option>
-                        <option value="graphic-design">التصميم الجرافيكي</option>
-                        <option value="digital-marketing">التسويق الرقمي</option>
-                        <option value="language-courses">دورات اللغات</option>
-                    </select>
-                </div>
-                <button
-                    type="submit"
-                    class="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-3 rounded-lg text-xl shadow-lg transform hover:scale-105 transition-all duration-300"
-                >
-                    إرسال طلب التسجيل
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <section id="contact" class="py-20 px-4 md:px-8 lg:px-16 bg-gray-900 bg-opacity-50">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                اتصل بنا
-            </h2>
-            <div class="grid md:grid-cols-3 gap-8 text-lg">
-                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-300 border border-indigo-700">
-                    <h3 class="font-bold text-2xl mb-4 text-blue-300">البريد الإلكتروني</h3>
-                    <p class="text-gray-300">saber@zaytounacademy.org</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-300 border border-indigo-700">
-                    <h3 class="font-bold text-2xl mb-4 text-blue-300">الهاتف</h3>
-                    <p class="text-gray-300">+967734788351</p> </div>
-                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-300 border border-indigo-700">
-                    <h3 class="font-bold text-2xl mb-4 text-blue-300">العنوان</h3>
-                    <p class="text-gray-300">تعز، اليمن</p>
-                    <p class="text-gray-300">شارع الزيتون، مبنى رقم 10</p>
+        <section class="py-20 bg-main-blue text-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">الأكاديمية في أرقام</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <p class="text-5xl font-extrabold text-accent-gold">6</p>
+                        <p class="mt-2 text-lg">مراحل دراسية</p>
+                    </div>
+                    <div>
+                        <p class="text-5xl font-extrabold text-accent-gold">20+</p>
+                        <p class="mt-2 text-lg">معلم وخبير تربوي</p>
+                    </div>
+                    <div>
+                        <p class="text-5xl font-extrabold text-accent-gold">100%</p>
+                        <p class="mt-2 text-lg">منهج رقمي متكامل</p>
+                    </div>
+                     <div>
+                        <p class="text-5xl font-extrabold text-accent-gold">15+</p>
+                        <p class="mt-2 text-lg">نشاط لاصفي</p>
+                    </div>
                 </div>
             </div>
-            <div class="mt-12">
-                <h3 class="font-bold text-2xl mb-6 text-blue-300">تابعنا على وسائل التواصل الاجتماعي</h3>
-                <div class="flex justify-center space-x-6 text-gray-400">
-                    <a href="#" class="hover:text-blue-400 transition-colors duration-300 text-3xl">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="hover:text-blue-400 transition-colors duration-300 text-3xl">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="hover:text-blue-400 transition-colors duration-300 text-3xl">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="hover:text-blue-400 transition-colors duration-300 text-3xl">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
+        </section>
+
+        <section class="py-24">
+            <div class="container mx-auto px-6">
+                 <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-4xl font-bold text-center">برامجنا التعليمية</h2>
+                    <p class="mt-4 text-gray-600">نقدم برامج تعليمية مصممة بعناية لتناسب كل مرحلة عمرية، مع التركيز على المهارات الأساسية ومهارات القرن الحادي والعشرين.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="images/program-1.jpg" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-300" alt="المرحلة التأسيسية">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3">المرحلة التأسيسية (1-3)</h3>
+                            <p class="text-gray-600 mb-4">بناء أساس متين في القراءة، الكتابة، والحساب من خلال اللعب والتعلم التفاعلي.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                         <img src="images/program-2.jpg" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-300" alt="المرحلة الابتدائية">
+                         <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3">المرحلة الابتدائية (4-6)</h3>
+                            <p class="text-gray-600 mb-4">تعميق المعرفة في المواد الأساسية وتطوير مهارات البحث والتفكير النقدي.</p>
+                        </div>
+                    </div>
+                     <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                         <img src="images/program-3.jpg" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-300" alt="الأنشطة الإثرائية">
+                         <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3">الأنشطة الإثرائية</h3>
+                            <p class="text-gray-600 mb-4">برامج داعمة في الفنون، الرياضة، والبرمجة لتنمية مواهب الطلاب وصقلها.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="py-8 px-4 md:px-8 lg:px-16 text-center text-gray-400 text-sm bg-gray-950">
-        <p>&copy; <span id="current-year"></span> أكاديمية الزيتون. جميع الحقوق محفوظة.</p>
-        <p>zaytounacademy.org</p>
+        <section class="bg-gray-200">
+             <div class="container mx-auto px-6 py-20 text-center">
+                 <h2 class="text-3xl font-bold">هل أنت مستعد لبدء رحلة التميز؟</h2>
+                 <p class="max-w-xl mx-auto mt-3 text-gray-600">انضم إلى مجتمعنا التعليمي الرائد. مقاعدنا محدودة لضمان أعلى مستويات الجودة.</p>
+                 <a href="register.html" class="inline-block mt-8 bg-accent-gold text-white font-bold py-3 px-10 rounded-md hover:opacity-90 transition-opacity">
+                    قدم طلب التسجيل
+                </a>
+             </div>
+        </section>
+    </main>
+    
+    <footer class="bg-main-blue text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">أكاديمية الزيتون</h3>
+                    <p class="text-gray-300">مؤسسة تعليمية تهدف لإعداد جيل مبدع ومفكر يساهم في بناء مستقبل مشرق.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">روابط سريعة</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-accent-gold">عن الأكاديمية</a></li>
+                        <li><a href="blog.html" class="hover:text-accent-gold">آخر الأخبار</a></li>
+                        <li><a href="gallery.html" class="hover:text-accent-gold">معرض الصور</a></li>
+                        <li><a href="register.html" class="hover:text-accent-gold">التسجيل</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-bold mb-4">تواصل معنا</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-accent-gold"></i><span>شارع الزيتون، تعز، اليمن</span></li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-3 text-accent-gold"></i><span dir="ltr">+967 734 788 351</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-accent-gold"></i><span>saber@zaytounacademy.org</span></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-bold mb-4">تابعنا</h3>
+                     <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-accent-gold"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-accent-gold"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-accent-gold"><i class="fab fa-youtube"></i></a>
+                     </div>
+                </div>
+            </div>
+            <div class="text-center border-t border-gray-700 mt-12 pt-6">
+                <p class="text-gray-400">© <span id="current-year"></span> أكاديمية الزيتون. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
     </footer>
 
     <script>
-        // Get the current year for the footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Handle form submission
-        document.getElementById('registration-form').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent default form submission
-
-            const formMessage = document.getElementById('form-message');
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const course = document.getElementById('course').value;
-
-            // Basic form validation
-            if (!name || !email || !phone || !course) {
-                formMessage.textContent = 'الرجاء تعبئة جميع الحقول المطلوبة.';
-                formMessage.className = 'p-4 mb-6 rounded-lg text-center bg-red-600 text-white';
-                formMessage.classList.remove('hidden');
-                return;
-            }
-
-            // Simulate form submission (in a real app, you'd send this data to a server)
-            console.log('بيانات التسجيل:', { name, email, phone, course });
-
-            formMessage.textContent = 'تم استلام طلب التسجيل بنجاح! سنتواصل معك قريباً.';
-            formMessage.className = 'p-4 mb-6 rounded-lg text-center bg-green-600 text-white';
-            formMessage.classList.remove('hidden');
-
-            // Clear form fields
-            document.getElementById('registration-form').reset();
-            document.getElementById('course').value = ''; // Reset select explicitly
-
-            // Hide message after a few seconds
-            setTimeout(() => {
-                formMessage.classList.add('hidden');
-            }, 5000);
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
     </script>
 </body>

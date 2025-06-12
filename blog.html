@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الصور - أكاديمية الزيتون</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-share.min.css" />
+    <style>
+        body { font-family: 'Tajawal', sans-serif; }
+        .gallery-item img { transition: transform 0.3s ease; }
+        .gallery-item:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-700"><a href="index.html">أكاديمية الزيتون</a></div>
+            <div class="hidden md:flex space-x-8 space-x-reverse items-center">
+                <a href="about.html" class="text-gray-600 hover:text-blue-600">عن الأكاديمية</a>
+                <a href="gallery.html" class="text-blue-600 font-bold">معرض الصور</a>
+                <a href="blog.html" class="text-gray-600 hover:text-blue-600">المدونة</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600">اتصل بنا</a>
+            </div>
+            <a href="register.html" class="hidden md:block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700">سجل الآن</a>
+        </nav>
+    </header>
+
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-4">فعالياتنا وأنشطتنا</h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">شاهدوا لمحات من الحياة اليومية واللحظات المميزة في أكاديميتنا.</p>
+            </div>
+            
+            <div id="lightgallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                
+                <a href="images/z1.png" class="gallery-item block rounded-lg shadow-md overflow-hidden group" data-sub-html="<h4>تكريم الطلاب المتفوقين</h4>">
+                    <img alt="تكريم الطلاب" class="w-full h-60 object-cover" src="images/z1.png" />
+                </a>
+
+                <a href="images/sports-day.jpg" class="gallery-item block rounded-lg shadow-md overflow-hidden group" data-sub-html="<h4>اليوم الرياضي السنوي</h4>">
+                    <img alt="يوم رياضي" class="w-full h-60 object-cover" src="images/sports-day.jpg" />
+                </a>
+
+                <a href="images/science-lab.jpg" class="gallery-item block rounded-lg shadow-md overflow-hidden group" data-sub-html="<h4>تجربة في معمل العلوم</h4>">
+                    <img alt="معمل العلوم" class="w-full h-60 object-cover" src="images/science-lab.jpg" />
+                </a>
+
+                <a href="images/national-day.jpg" class="gallery-item block rounded-lg shadow-md overflow-hidden group" data-sub-html="<h4>الاحتفال بالأعياد الوطنية</h4>">
+                    <img alt="احتفال وطني" class="w-full h-60 object-cover" src="images/national-day.jpg" />
+                </a>
+
+                <a href="images/art-class.jpg" class="gallery-item block rounded-lg shadow-md overflow-hidden group" data-sub-html="<h4>نشاط فني</h4>">
+                    <img alt="نشاط فني" class="w-full h-60 object-cover" src="images/art-class.jpg" />
+                </a>
+
+                <a href="images/school-trip.jpg" class="gallery-item block rounded-lg shadow-md overflow-hidden group" data-sub-html="<h4>رحلة مدرسية</h4>">
+                    <img alt="رحلة مدرسية" class="w-full h-60 object-cover" src="images/school-trip.jpg" />
+                </a>
+
+                <a href="images/reading-competition.jpg" class="gallery-item block rounded-lg shadow-md overflow-hidden group" data-sub-html="<h4>مسابقة القراءة</h4>">
+                    <img alt="مسابقة قراءة" class="w-full h-60 object-cover" src="images/reading-competition.jpg" />
+                </a>
+                
+                <a href="images/open-day.jpg" class="gallery-item block rounded-lg shadow-md overflow-hidden group" data-sub-html="<h4>اليوم المفتوح</h4>">
+                    <img alt="اليوم المفتوح" class="w-full h-60 object-cover" src="images/open-day.jpg" />
+                </a>
+                
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <p>© <span id="current-year"></span> أكاديمية الزيتون. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/share/lg-share.min.js"></script>
+    
+    <script>
+        lightGallery(document.getElementById('lightgallery'), {
+            plugins: [lgThumbnail, lgShare],
+            speed: 500,
+            download: false,
+        });
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
