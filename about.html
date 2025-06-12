@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { font-family: 'Poppins', 'Tajawal', sans-serif; color: #002147; }
@@ -22,19 +22,29 @@
 
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-main-blue">أكاديمية الزيتون</a>
+            <a href="index.html" class="text-2xl font-bold text-main-blue">
+                أكاديمية الزيتون
+            </a>
             <div class="hidden lg:flex items-center space-x-8 space-x-reverse">
                 <a href="about.html" class="text-base font-bold text-accent-gold">عن الأكاديمية</a>
-                <a href="gallery.html" class="text-base font-medium hover:text-accent-gold">معرض الصور</a>
-                <a href="blog.html" class="text-base font-medium hover:text-accent-gold">المدونة</a>
-                <a href="contact.html" class="text-base font-medium hover:text-accent-gold">اتصل بنا</a>
+                <a href="gallery.html" class="text-base font-medium hover:text-accent-gold transition-colors">معرض الصور</a>
+                <a href="blog.html" class="text-base font-medium hover:text-accent-gold transition-colors">المدونة</a>
+                <a href="contact.html" class="text-base font-medium hover:text-accent-gold transition-colors">اتصل بنا</a>
             </div>
-            <a href="register.html" class="hidden lg:block bg-accent-gold text-white font-bold py-2 px-6 rounded-md hover:opacity-90">التسجيل الآن</a>
-            <button id="mobile-menu-button" class="lg:hidden text-main-blue text-2xl"><i class="fas fa-bars"></i></button>
+            <a href="register.html" class="hidden lg:block bg-accent-gold text-white font-bold py-2 px-6 rounded-md hover:opacity-90 transition-opacity">
+                التسجيل الآن
+            </a>
+             <button id="mobile-menu-button" class="lg:hidden text-main-blue text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-t p-4">
-            <a href="about.html" class="block py-2 px-4 text-center text-accent-gold font-bold bg-gray-100 rounded-md">عن الأكاديمية</a>
-            </div>
+             <a href="about.html" class="block py-2 px-4 text-center text-accent-gold font-bold bg-gray-100 rounded-md">عن الأكاديمية</a>
+             <a href="gallery.html" class="block py-2 px-4 text-center hover:bg-gray-100 rounded-md">معرض الصور</a>
+             <a href="blog.html" class="block py-2 px-4 text-center hover:bg-gray-100 rounded-md">المدونة</a>
+             <a href="contact.html" class="block py-2 px-4 text-center hover:bg-gray-100 rounded-md">اتصل بنا</a>
+             <a href="register.html" class="block w-full text-center mt-4 bg-accent-gold text-white font-bold py-2 px-6 rounded-md hover:opacity-90">التسجيل الآن</a>
+        </div>
     </header>
 
     <main>
@@ -59,31 +69,40 @@
                 </div>
             </div>
         </section>
+        
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="section-heading mx-auto">الاعتماد الرسمي</h2>
+                 <p class="mt-8 text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                    أكاديمية الزيتون هي مؤسسة تعليمية أهلية معتمدة ومرخصة من قبل وزارة التربية والتعليم في الجمهورية اليمنية. نحن نلتزم بكافة المعايير والمناهج الدراسية المعتمدة رسميًا، مما يضمن لطلابنا الحصول على شهادات معترف بها.
+                 </p>
+            </div>
+        </section>
 
         <section class="py-24 bg-gray-100">
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-2xl mx-auto">
-                    <h2 class="text-4xl font-bold">تعرف على قيادتنا التربوية</h2>
+                    <h2 class="section-heading mx-auto">قيادتنا التربوية</h2>
                     <p class="mt-4 text-gray-600">فريق من الخبراء التربويين المتفانين في خدمة رسالتنا التعليمية وتوجيه طلابنا نحو النجاح.</p>
                 </div>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
-                    <div class="text-center">
-                        <img class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover" src="images/about/manager-photo.jpg" alt="المدير">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 text-center">
+                    <div>
+                        <img class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover" src="https://via.placeholder.com/150" alt="المدير">
                         <h3 class="mt-4 text-xl font-bold">أ. صابر عبدالله</h3>
                         <p class="text-accent-gold">مدير الأكاديمية</p>
                     </div>
-                    <div class="text-center">
-                        <img class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover" src="images/about/deputy-head.jpg" alt="الوكيل">
+                    <div>
+                        <img class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover" src="https://via.placeholder.com/150" alt="الوكيلة">
                         <h3 class="mt-4 text-xl font-bold">أ. فاطمة علي</h3>
                         <p class="text-accent-gold">وكيلة المدرسة</p>
                     </div>
-                    <div class="text-center">
-                        <img class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover" src="images/about/academic-supervisor.jpg" alt="المشرف">
+                    <div>
+                        <img class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover" src="https://via.placeholder.com/150" alt="المشرف الأكاديمي">
                         <h3 class="mt-4 text-xl font-bold">أ. أحمد قائد</h3>
                         <p class="text-accent-gold">المشرف الأكاديمي</p>
                     </div>
-                    <div class="text-center">
-                        <img class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover" src="images/about/student-counselor.jpg" alt="المرشدة">
+                    <div>
+                        <img class="w-40 h-40 rounded-full mx-auto shadow-lg object-cover" src="https://via.placeholder.com/150" alt="المرشدة الطلابية">
                         <h3 class="mt-4 text-xl font-bold">أ. هدى ياسين</h3>
                         <p class="text-accent-gold">مرشدة طلابية</p>
                     </div>
@@ -93,10 +112,51 @@
     </main>
 
     <footer class="bg-main-blue text-white pt-16 pb-8">
-        </footer>
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">أكاديمية الزيتون</h3>
+                    <p class="text-gray-300">مؤسسة تعليمية تهدف لإعداد جيل مبدع ومفكر يساهم في بناء مستقبل مشرق.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">روابط سريعة</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-accent-gold">عن الأكاديمية</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-accent-gold">آخر الأخبار</a></li>
+                        <li><a href="gallery.html" class="text-gray-300 hover:text-accent-gold">معرض الصور</a></li>
+                        <li><a href="register.html" class="text-gray-300 hover:text-accent-gold">التسجيل</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-bold mb-4">تواصل معنا</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-accent-gold"></i><span>شارع الزيتون، تعز، اليمن</span></li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-3 text-accent-gold"></i><span dir="ltr">+967 734 788 351</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-accent-gold"></i><span>info@zaytounacademy.org</span></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-bold mb-4">تابعنا</h3>
+                     <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-accent-gold transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-accent-gold transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-accent-gold transition-colors"><i class="fab fa-youtube"></i></a>
+                     </div>
+                </div>
+            </div>
+            <div class="text-center border-t border-gray-700 mt-12 pt-6">
+                <p class="text-gray-400">© <span id="current-year"></span> أكاديمية الزيتون. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
-        // ... نفس كود الجافاسكريبت ...
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
     </script>
 </body>
 </html>

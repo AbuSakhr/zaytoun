@@ -7,50 +7,69 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: 'Tajawal', sans-serif; }
+        body { font-family: 'Poppins', 'Tajawal', sans-serif; color: #002147; }
+        .bg-main-blue { background-color: #002147; }
+        .bg-accent-gold { background-color: #D4AF37; }
+        .text-accent-gold { color: #D4AF37; }
+        .border-accent-gold { border-color: #D4AF37; }
+        .focus\:ring-accent-gold:focus { --tw-ring-color: #D4AF37; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50">
 
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-blue-700">
-                <a href="index.html">أكاديمية الزيتون</a>
+            <a href="index.html" class="text-2xl font-bold text-main-blue">
+                أكاديمية الزيتون
+            </a>
+            <div class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="about.html" class="text-base font-medium hover:text-accent-gold transition-colors">عن الأكاديمية</a>
+                <a href="gallery.html" class="text-base font-medium hover:text-accent-gold transition-colors">معرض الصور</a>
+                <a href="blog.html" class="text-base font-medium hover:text-accent-gold transition-colors">المدونة</a>
+                <a href="contact.html" class="text-base font-medium hover:text-accent-gold transition-colors">اتصل بنا</a>
             </div>
-            <div class="hidden md:flex space-x-8 space-x-reverse items-center">
-                <a href="index.html#about" class="text-gray-600 hover:text-blue-600">عن الأكاديمية</a>
-                <a href="blog.html" class="text-gray-600 hover:text-blue-600">المدونة</a>
-                <a href="index.html#stages" class="text-gray-600 hover:text-blue-600">المراحل الدراسية</a>
-                <a href="index.html#contact" class="text-gray-600 hover:text-blue-600">اتصل بنا</a>
-            </div>
-            <a href="register.html" class="hidden md:block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700">سجل الآن</a>
-            </nav>
+            <a href="register.html" class="hidden lg:block bg-accent-gold text-white font-bold py-2 px-6 rounded-md hover:opacity-90 transition-opacity">
+                التسجيل الآن
+            </a>
+            <button id="mobile-menu-button" class="lg:hidden text-main-blue text-2xl"><i class="fas fa-bars"></i></button>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t p-4">
+             <a href="about.html" class="block py-2 px-4 text-center hover:bg-gray-100 rounded-md">عن الأكاديمية</a>
+             <a href="gallery.html" class="block py-2 px-4 text-center hover:bg-gray-100 rounded-md">معرض الصور</a>
+             <a href="blog.html" class="block py-2 px-4 text-center hover:bg-gray-100 rounded-md">المدونة</a>
+             <a href="contact.html" class="block py-2 px-4 text-center hover:bg-gray-100 rounded-md">اتصل بنا</a>
+             <a href="register.html" class="block w-full text-center mt-4 bg-accent-gold text-white font-bold py-2 px-6 rounded-md hover:opacity-90">التسجيل الآن</a>
+        </div>
     </header>
 
-    <main class="py-16 md:py-24">
+    <main class="py-24">
         <div class="container mx-auto px-6">
-            <h1 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-4">طلب التسجيل في أكاديمية الزيتون</h1>
-            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
-                نحن سعداء باهتمامكم بالانضمام إلى عائلتنا. يرجى ملء النموذج أدناه لتقديم طلب تسجيل مبدئي، وسيقوم فريقنا بالتواصل معكم في أقرب وقت ممكن لاستكمال الإجراءات.
-            </p>
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-main-blue mb-4">طلب التسجيل في الأكاديمية</h1>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    نحن سعداء باهتمامكم بالانضمام إلى عائلتنا. يرجى ملء النموذج أدناه لتقديم طلب تسجيل مبدئي، وسيقوم فريقنا بالتواصل معكم في أقرب وقت ممكن لاستكمال الإجراءات.
+                </p>
+            </div>
 
             <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-xl">
                 <form action="#" method="POST">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <h2 class="text-2xl font-bold text-main-blue mb-6 border-b-2 border-accent-gold pb-3">معلومات الطالب</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                         <div>
-                            <label for="student-name" class="block text-gray-700 font-bold mb-2">اسم الطالب/ـة الكامل</label>
-                            <input type="text" id="student-name" name="student-name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <label for="student-name" class="block text-gray-700 font-semibold mb-2">اسم الطالب/ـة الكامل</label>
+                            <input type="text" id="student-name" name="student-name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-gold" required>
                         </div>
                         <div>
-                            <label for="student-dob" class="block text-gray-700 font-bold mb-2">تاريخ ميلاد الطالب/ـة</label>
-                            <input type="date" id="student-dob" name="student-dob" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <label for="student-dob" class="block text-gray-700 font-semibold mb-2">تاريخ ميلاد الطالب/ـة</label>
+                            <input type="date" id="student-dob" name="student-dob" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-gold" required>
                         </div>
                         <div>
-                            <label for="current-grade" class="block text-gray-700 font-bold mb-2">الصف الدراسي المطلوب</label>
-                            <select id="current-grade" name="current-grade" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <label for="grade" class="block text-gray-700 font-semibold mb-2">الصف الدراسي المطلوب</label>
+                            <select id="grade" name="grade" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-gold bg-white" required>
+                                <option>اختر الصف...</option>
                                 <option>الصف الأول</option>
                                 <option>الصف الثاني</option>
                                 <option>الصف الثالث</option>
@@ -59,28 +78,30 @@
                                 <option>الصف السادس</option>
                             </select>
                         </div>
-                        
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-main-blue mb-6 border-b-2 border-accent-gold pb-3">معلومات ولي الأمر</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label for="parent-name" class="block text-gray-700 font-bold mb-2">اسم ولي الأمر</label>
-                            <input type="text" id="parent-name" name="parent-name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <label for="parent-name" class="block text-gray-700 font-semibold mb-2">اسم ولي الأمر</label>
+                            <input type="text" id="parent-name" name="parent-name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-gold" required>
                         </div>
                         <div>
-                            <label for="phone-number" class="block text-gray-700 font-bold mb-2">رقم الهاتف (مع رمز الدولة)</label>
-                            <input type="tel" id="phone-number" name="phone-number" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="+967 123 456 789" required>
+                            <label for="phone-number" class="block text-gray-700 font-semibold mb-2">رقم الهاتف للتواصل</label>
+                            <input type="tel" id="phone-number" name="phone-number" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-gold" placeholder="مثال: +967734788351" dir="ltr" required>
                         </div>
-                        <div>
-                            <label for="email" class="block text-gray-700 font-bold mb-2">البريد الإلكتروني</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <div class="md:col-span-2">
+                            <label for="email" class="block text-gray-700 font-semibold mb-2">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-gold" dir="ltr">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="notes" class="block text-gray-700 font-semibold mb-2">ملاحظات إضافية (اختياري)</label>
+                            <textarea id="notes" name="notes" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-gold"></textarea>
                         </div>
                     </div>
                     
-                    <div class="mt-6">
-                        <label for="message" class="block text-gray-700 font-bold mb-2">ملاحظات إضافية (اختياري)</label>
-                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                    </div>
-
                     <div class="mt-8 text-center">
-                        <button type="submit" class="bg-blue-600 text-white font-bold py-3 px-10 rounded-full hover:bg-blue-700 transition duration-300 text-lg">
+                        <button type="submit" class="bg-accent-gold text-white font-bold py-3 px-12 rounded-md hover:opacity-90 transition-opacity text-lg">
                             إرسال طلب التسجيل
                         </button>
                     </div>
@@ -89,14 +110,52 @@
         </div>
     </main>
     
-    <footer class="bg-gray-800 text-white py-8 mt-16">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-gray-400">&copy; <span id="current-year"></span> أكاديمية الزيتون. جميع الحقوق محفوظة.</p>
+    <footer class="bg-main-blue text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">أكاديمية الزيتون</h3>
+                    <p class="text-gray-300">مؤسسة تعليمية تهدف لإعداد جيل مبدع ومفكر يساهم في بناء مستقبل مشرق.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">روابط سريعة</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-accent-gold">عن الأكاديمية</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-accent-gold">آخر الأخبار</a></li>
+                        <li><a href="gallery.html" class="text-gray-300 hover:text-accent-gold">معرض الصور</a></li>
+                        <li><a href="register.html" class="text-gray-300 hover:text-accent-gold">التسجيل</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-bold mb-4">تواصل معنا</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-accent-gold"></i><span>شارع الزيتون، تعز، اليمن</span></li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-3 text-accent-gold"></i><span dir="ltr">+967 734 788 351</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-accent-gold"></i><span>info@zaytounacademy.org</span></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-bold mb-4">تابعنا</h3>
+                     <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-accent-gold transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-accent-gold transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-accent-gold transition-colors"><i class="fab fa-youtube"></i></a>
+                     </div>
+                </div>
+            </div>
+            <div class="text-center border-t border-gray-700 mt-12 pt-6">
+                <p class="text-gray-400">© <span id="current-year"></span> أكاديمية الزيتون. جميع الحقوق محفوظة.</p>
+            </div>
         </div>
     </footer>
 
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
     </script>
 </body>
 </html>

@@ -7,16 +7,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-share.min.css" />
     <style>
-        body { 
-            font-family: 'Poppins', 'Tajawal', sans-serif;
-            color: #002147; /* أزرق داكن */
-        }
+        body { font-family: 'Poppins', 'Tajawal', sans-serif; color: #002147; }
         .bg-main-blue { background-color: #002147; }
         .bg-accent-gold { background-color: #D4AF37; }
         .text-accent-gold { color: #D4AF37; }
@@ -54,28 +50,37 @@
     <main class="py-24">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-main-blue mb-4">فعالياتنا وأنشطتنا</h1>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">شاهدوا لمحات من الحياة اليومية واللحظات المميزة في أكاديميتنا.</p>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-main-blue mb-4">لحظات من الحياة الأكاديمية</h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">شاهدوا لمحات من الفعاليات والأنشطة واللحظات التعليمية المميزة في أكاديميتنا.</p>
             </div>
             
-            <div class="flex justify-center flex-wrap gap-3 mb-12">
-                <button class="bg-accent-gold text-white font-semibold py-2 px-5 rounded-md">الكل</button>
-                <button class="bg-white text-main-blue font-semibold py-2 px-5 rounded-md border border-gray-300 hover:bg-gray-100">احتفالات</button>
-                <button class="bg-white text-main-blue font-semibold py-2 px-5 rounded-md border border-gray-300 hover:bg-gray-100">أيام رياضية</button>
-                <button class="bg-white text-main-blue font-semibold py-2 px-5 rounded-md border border-gray-300 hover:bg-gray-100">رحلات علمية</button>
-            </div>
-
             <div id="lightgallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 
-                <a href="images/z1.png" class="gallery-item block rounded-lg shadow-md overflow-hidden group" data-sub-html="<h4>تكريم الطلاب المتفوقين</h4>">
-                    <img alt="تكريم الطلاب" class="w-full h-60 object-cover" src="images/z1.png" />
+                <a href="https://images.unsplash.com/photo-1577896851231-70ef18881754" class="gallery-item block rounded-lg shadow-md overflow-hidden group" data-sub-html="<h4>تكريم الطلاب المتفوقين</h4><p>احتفالية نهاية العام لتكريم جهود طلابنا المتميزين.</p>">
+                    <img alt="تكريم الطلاب" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1577896851231-70ef18881754" />
                 </a>
 
-                <a href="images/sports-day.jpg" class="gallery-item block rounded-lg shadow-md overflow-hidden group" data-sub-html="<h4>اليوم الرياضي السنوي</h4>">
-                    <img alt="يوم رياضي" class="w-full h-60 object-cover" src="images/sports-day.jpg" />
+                <a href="https://images.unsplash.com/photo-1543269865-cbf427effbad" class="gallery-item block rounded-lg shadow-md overflow-hidden group" data-sub-html="<h4>اليوم الرياضي السنوي</h4><p>منافسات وأنشطة رياضية لتعزيز الروح الفريقية.</p>">
+                    <img alt="يوم رياضي" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1543269865-cbf427effbad" />
                 </a>
 
-                </div>
+                <a href="https://images.unsplash.com/photo-1554475901-453896359P44" class="gallery-item block rounded-lg shadow-md overflow-hidden group" data-sub-html="<h4>تجربة في معمل العلوم</h4><p>تطبيق المفاهيم النظرية بشكل عملي في مختبر العلوم.</p>">
+                    <img alt="معمل العلوم" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1554475901-453896359c44" />
+                </a>
+
+                <a href="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="gallery-item block rounded-lg shadow-md overflow-hidden group" data-sub-html="<h4>الاحتفال بالأعياد الوطنية</h4><p>مشاركة الطلاب في فعاليات الاحتفالات الوطنية لتعزيز الانتماء.</p>">
+                    <img alt="احتفال وطني" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" />
+                </a>
+
+                <a href="https://images.unsplash.com/photo-1509062522246-3755977927d7" class="gallery-item block rounded-lg shadow-md overflow-hidden group" data-sub-html="<h4>نشاط فني</h4><p>إطلاق العنان لإبداع الطلاب في حصة التربية الفنية.</p>">
+                    <img alt="نشاط فني" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1509062522246-3755977927d7" />
+                </a>
+
+                <a href="https://images.unsplash.com/photo-1588072432836-e80024e82515" class="gallery-item block rounded-lg shadow-md overflow-hidden group" data-sub-html="<h4>رحلة مدرسية تعليمية</h4><p>زيارة ميدانية لأحد المعالم لربط المناهج بالواقع.</p>">
+                    <img alt="رحلة مدرسية" class="w-full h-60 object-cover" src="https://images.unsplash.com/photo-1588072432836-e80024e82515" />
+                </a>
+
+            </div>
         </div>
     </main>
 
@@ -89,10 +94,10 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">روابط سريعة</h3>
                     <ul class="space-y-2">
-                        <li><a href="about.html" class="hover:text-accent-gold">عن الأكاديمية</a></li>
-                        <li><a href="blog.html" class="hover:text-accent-gold">آخر الأخبار</a></li>
-                        <li><a href="gallery.html" class="hover:text-accent-gold">معرض الصور</a></li>
-                        <li><a href="register.html" class="hover:text-accent-gold">التسجيل</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-accent-gold">عن الأكاديمية</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-accent-gold">آخر الأخبار</a></li>
+                        <li><a href="gallery.html" class="text-gray-300 hover:text-accent-gold">معرض الصور</a></li>
+                        <li><a href="register.html" class="text-gray-300 hover:text-accent-gold">التسجيل</a></li>
                     </ul>
                 </div>
                  <div>
@@ -100,13 +105,15 @@
                     <ul class="space-y-3 text-gray-300">
                         <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-accent-gold"></i><span>شارع الزيتون، تعز، اليمن</span></li>
                         <li class="flex items-center"><i class="fas fa-phone-alt mr-3 text-accent-gold"></i><span dir="ltr">+967 734 788 351</span></li>
-                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-accent-gold"></i><span>saber@zaytounacademy.org</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-accent-gold"></i><span>info@zaytounacademy.org</span></li>
                     </ul>
                 </div>
                  <div>
                     <h3 class="text-xl font-bold mb-4">تابعنا</h3>
                      <div class="flex space-x-4 space-x-reverse">
-                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-accent-gold"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-accent-gold transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-accent-gold transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-accent-gold transition-colors"><i class="fab fa-youtube"></i></a>
                      </div>
                 </div>
             </div>
@@ -118,16 +125,12 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/share/lg-share.min.js"></script>
     <script>
-        // تشغيل معرض الصور
         lightGallery(document.getElementById('lightgallery'), {
-            plugins: [lgThumbnail, lgShare],
+            plugins: [lgThumbnail],
             speed: 500,
             download: false,
         });
-
-        // تشغيل قائمة الموبايل
         document.getElementById('current-year').textContent = new Date().getFullYear();
         const menuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
